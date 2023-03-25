@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_admin"
+    app:startDestination="@id/tamamlanmisRaporlarFragment">
+
+    <fragment
+        android:id="@+id/tamamlanmisRaporlarFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.adminView.TamamlanmisRaporlarFragment"
+        android:label="Raporlar"
+        tools:layout="@layout/fragment_tamamlanmis_raporlar" >
+        <action
+            android:id="@+id/action_tamamlanmisRaporlarFragment_to_raporDetailFragment"
+            app:destination="@id/raporDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hesabimFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.adminView.HesabimFragment"
+        android:label="Hesabım"
+        tools:layout="@layout/fragment_hesabim" >
+        <action
+            android:id="@+id/action_hesabimFragment_to_adminRaporEkleFragment"
+            app:destination="@id/adminRaporEkleFragment" />
+        <action
+            android:id="@+id/action_hesabimFragment_to_adminRaporGosterFragment"
+            app:destination="@id/adminRaporGosterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/raporDetailFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.userView.RaporDetailFragment"
+        android:label="Rapor Detayları"
+        tools:layout="@layout/fragment_rapor_detail">
+        <argument
+            android:name="rapor"
+            app:argType="com.caneryildirim.uludagtrikovardiyaraporu.model.Rapor" />
+        <argument
+            android:name="adminInfo"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/istatistikFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.adminView.IstatistikFragment"
+        android:label="İstatistikler"
+        tools:layout="@layout/fragment_istatistik" >
+        <action
+            android:id="@+id/action_istatistikFragment_to_istatistikDetailFragment"
+            app:destination="@id/istatistikDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/istatistikDetailFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.adminView.IstatistikDetailFragment"
+        android:label="IstatistikDetailFragment" >
+        <argument
+            android:name="istatistikRapor"
+            app:argType="com.caneryildirim.uludagtrikovardiyaraporu.model.IstatistikRapor" />
+        <argument
+            android:name="istatistikType"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/varyantFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.adminView.VaryantFragment"
+        android:label="Varyantlar"
+        tools:layout="@layout/fragment_varyant" />
+    <fragment
+        android:id="@+id/kullanicilarFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.adminView.KullanicilarFragment"
+        android:label="Kullanıcılar"
+        tools:layout="@layout/fragment_kullanicilar" />
+    <fragment
+        android:id="@+id/istatistikMainFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.adminView.IstatistikMainFragment"
+        android:label="İstatistikler"
+        tools:layout="@layout/fragment_istatistik_main" >
+        <action
+            android:id="@+id/action_istatistikMainFragment_to_istatistikDetailFragment"
+            app:destination="@id/istatistikDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/istatistikVardiyaFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.adminView.IstatistikVardiyaFragment"
+        android:label="fragment_istatistik_vardiya"
+        tools:layout="@layout/fragment_istatistik_vardiya" >
+        <action
+            android:id="@+id/action_istatistikVardiyaFragment_to_istatistikDetailFragment"
+            app:destination="@id/istatistikDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/istatistikPersonelFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.adminView.IstatistikPersonelFragment"
+        android:label="fragment_istatistik_personel"
+        tools:layout="@layout/fragment_istatistik_personel" >
+        <action
+            android:id="@+id/action_istatistikPersonelFragment_to_istatistikDetailFragment"
+            app:destination="@id/istatistikDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminRaporEkleFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.adminView.AdminRaporEkleFragment"
+        android:label="Rapor Ekle" />
+    <fragment
+        android:id="@+id/adminRaporGosterFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.adminView.AdminRaporGosterFragment"
+        android:label="Raporlar"
+        tools:layout="@layout/fragment_admin_rapor_goster" />
+</navigation>

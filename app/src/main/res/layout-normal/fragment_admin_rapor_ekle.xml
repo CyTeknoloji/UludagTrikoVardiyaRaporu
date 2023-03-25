@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/cardview_dark_background"
+    tools:context=".adminView.AdminRaporEkleFragment">
+
+
+    <ProgressBar
+        android:id="@+id/progressBarRaporEkle"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollViewRaporEkle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/textTarih1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Tarih"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textTarih"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="100dp"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textTarih1" />
+
+            <TextView
+                android:id="@+id/textMakina1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Makina"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textTarih" />
+
+            <Spinner
+                android:id="@+id/spinnerMakina"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textMakina1" />
+
+            <TextView
+                android:id="@+id/textCalismaSure1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Çalışma Süresi"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerMakina" />
+
+            <EditText
+                android:id="@+id/editCalismaSureSaat"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textCalismaSure1" />
+
+            <TextView
+                android:id="@+id/textView210"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text=":"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editCalismaSureSaat"
+                app:layout_constraintStart_toEndOf="@+id/editCalismaSureSaat"
+                app:layout_constraintTop_toTopOf="@+id/editCalismaSureSaat" />
+
+            <EditText
+                android:id="@+id/editCalismaSureDakika"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/textView210"
+                app:layout_constraintTop_toTopOf="@+id/editCalismaSureSaat" />
+
+            <TextView
+                android:id="@+id/textUretimSure1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Üretim Süresi"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editCalismaSureSaat" />
+
+            <EditText
+                android:id="@+id/editUretimSureSaat"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textUretimSure1" />
+
+            <TextView
+                android:id="@+id/textView310"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text=":"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editUretimSureSaat"
+                app:layout_constraintStart_toEndOf="@+id/editUretimSureSaat"
+                app:layout_constraintTop_toTopOf="@+id/editUretimSureSaat" />
+
+            <EditText
+                android:id="@+id/editUretimSureDakika"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/textView210"
+                app:layout_constraintTop_toTopOf="@+id/editUretimSureSaat" />
+
+            <TextView
+                android:id="@+id/textUretimYuzde1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Üretim Yüzdesi"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editUretimSureSaat" />
+
+            <EditText
+                android:id="@+id/editUretimYuzde"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="100dp"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textUretimYuzde1" />
+
+            <TextView
+                android:id="@+id/textHareketCubugu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Hareket Çubuğu"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editUretimYuzde" />
+
+            <EditText
+                android:id="@+id/editHareketCubuguSaat"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textHareketCubugu1" />
+
+            <TextView
+                android:id="@+id/textView410"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text=":"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editHareketCubuguSaat"
+                app:layout_constraintStart_toEndOf="@+id/editHareketCubuguSaat"
+                app:layout_constraintTop_toTopOf="@+id/editHareketCubuguSaat" />
+
+            <EditText
+                android:id="@+id/editHareketCubuguDakika"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/textView410"
+                app:layout_constraintTop_toTopOf="@+id/editHareketCubuguSaat" />
+
+            <TextView
+                android:id="@+id/textIplikBes1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="İplik Bes"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editHareketCubuguSaat" />
+
+            <EditText
+                android:id="@+id/editIplikBesSaat"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textIplikBes1" />
+
+            <TextView
+                android:id="@+id/textView510"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text=":"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editIplikBesSaat"
+                app:layout_constraintStart_toEndOf="@+id/editIplikBesSaat"
+                app:layout_constraintTop_toTopOf="@+id/editIplikBesSaat" />
+
+            <EditText
+                android:id="@+id/editIplikBesDakika"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/textView410"
+                app:layout_constraintTop_toTopOf="@+id/editIplikBesSaat" />
+
+
+            <TextView
+                android:id="@+id/textParcaSayaci1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Parça Sayacı"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editIplikBesSaat" />
+
+            <EditText
+                android:id="@+id/editParcaSayaciSaat"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textParcaSayaci1" />
+
+            <TextView
+                android:id="@+id/textView610"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text=":"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editParcaSayaciSaat"
+                app:layout_constraintStart_toEndOf="@+id/editParcaSayaciSaat"
+                app:layout_constraintTop_toTopOf="@+id/editParcaSayaciSaat" />
+
+            <EditText
+                android:id="@+id/editParcaSayaciDakika"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/textView610"
+                app:layout_constraintTop_toTopOf="@+id/editParcaSayaciSaat" />
+
+
+            <TextView
+                android:id="@+id/textDirDrs1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Dir Drş"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editParcaSayaciSaat" />
+
+            <EditText
+                android:id="@+id/editDirDrsSaat"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textDirDrs1" />
+
+            <TextView
+                android:id="@+id/textView710"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text=":"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editDirDrsSaat"
+                app:layout_constraintStart_toEndOf="@+id/editDirDrsSaat"
+                app:layout_constraintTop_toTopOf="@+id/editDirDrsSaat" />
+
+            <EditText
+                android:id="@+id/editDirDrsDakika"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/textView710"
+                app:layout_constraintTop_toTopOf="@+id/editDirDrsSaat" />
+
+
+            <TextView
+                android:id="@+id/textIgneSen1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="İğne Sen"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editDirDrsSaat" />
+
+            <EditText
+                android:id="@+id/editIgneSenSaat"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textIgneSen1" />
+
+            <TextView
+                android:id="@+id/textView810"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text=":"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editIgneSenSaat"
+                app:layout_constraintStart_toEndOf="@+id/editIgneSenSaat"
+                app:layout_constraintTop_toTopOf="@+id/editIgneSenSaat" />
+
+            <EditText
+                android:id="@+id/editIgneSenDakika"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/textView810"
+                app:layout_constraintTop_toTopOf="@+id/editIgneSenSaat" />
+
+
+            <TextView
+                android:id="@+id/textMerdanECekimi1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Merdan E Çekimi"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editIgneSenSaat" />
+
+            <EditText
+                android:id="@+id/editMerdanECekimiSaat"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textMerdanECekimi1" />
+
+            <TextView
+                android:id="@+id/textView910"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text=":"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editMerdanECekimiSaat"
+                app:layout_constraintStart_toEndOf="@+id/editMerdanECekimiSaat"
+                app:layout_constraintTop_toTopOf="@+id/editMerdanECekimiSaat" />
+
+            <EditText
+                android:id="@+id/editMerdanECekimiDakika"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/textView910"
+                app:layout_constraintTop_toTopOf="@+id/editMerdanECekimiSaat" />
+
+
+
+            <TextView
+                android:id="@+id/textProgramlama1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Programlama"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editMerdanECekimiSaat" />
+
+            <EditText
+                android:id="@+id/editProgramlamaSaat"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textProgramlama1" />
+
+            <TextView
+                android:id="@+id/textView1010"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text=":"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editProgramlamaSaat"
+                app:layout_constraintStart_toEndOf="@+id/editProgramlamaSaat"
+                app:layout_constraintTop_toTopOf="@+id/editProgramlamaSaat" />
+
+            <EditText
+                android:id="@+id/editProgramlamaDakika"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/textView1010"
+                app:layout_constraintTop_toTopOf="@+id/editProgramlamaSaat" />
+
+
+
+            <TextView
+                android:id="@+id/textMakineStop1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Makine Stop"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editProgramlamaSaat" />
+
+            <EditText
+                android:id="@+id/editMakineStopSaat"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textMakineStop1" />
+
+            <TextView
+                android:id="@+id/textView1110"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text=":"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editMakineStopSaat"
+                app:layout_constraintStart_toEndOf="@+id/editMakineStopSaat"
+                app:layout_constraintTop_toTopOf="@+id/editMakineStopSaat" />
+
+            <EditText
+                android:id="@+id/editMakineStopDakika"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/textView1110"
+                app:layout_constraintTop_toTopOf="@+id/editMakineStopSaat" />
+
+
+
+            <TextView
+                android:id="@+id/textSokStopAparati1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Şok Stop Aparatı"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editMakineStopSaat" />
+
+            <EditText
+                android:id="@+id/editSokStopAparatiSaat"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textSokStopAparati1" />
+
+            <TextView
+                android:id="@+id/textView1210"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text=":"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editSokStopAparatiSaat"
+                app:layout_constraintStart_toEndOf="@+id/editSokStopAparatiSaat"
+                app:layout_constraintTop_toTopOf="@+id/editSokStopAparatiSaat" />
+
+            <EditText
+                android:id="@+id/editSokStopAparatiDakika"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/textView1210"
+                app:layout_constraintTop_toTopOf="@+id/editSokStopAparatiSaat" />
+
+
+
+            <TextView
+                android:id="@+id/textJakarHatasi1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Jakar Hatası"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editSokStopAparatiSaat" />
+
+            <EditText
+                android:id="@+id/editJakarHatasiSaat"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textJakarHatasi1" />
+
+            <TextView
+                android:id="@+id/textView1310"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text=":"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editJakarHatasiSaat"
+                app:layout_constraintStart_toEndOf="@+id/editJakarHatasiSaat"
+                app:layout_constraintTop_toTopOf="@+id/editJakarHatasiSaat" />
+
+            <EditText
+                android:id="@+id/editJakarHatasiDakika"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/textView1310"
+                app:layout_constraintTop_toTopOf="@+id/editJakarHatasiSaat" />
+
+
+            <TextView
+                android:id="@+id/textToplamHar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Toplam Hareketler"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editJakarHatasiSaat" />
+
+            <EditText
+                android:id="@+id/editToplamHar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="100dp"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textToplamHar1" />
+
+            <TextView
+                android:id="@+id/textYavasHarSay1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Yavaş Hareket Sayısı"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editToplamHar" />
+
+            <EditText
+                android:id="@+id/editYavasHarSay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="100dp"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textYavasHarSay1" />
+
+
+            <TextView
+                android:id="@+id/textUretimAd1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Üretim Adedi"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editYavasHarSay" />
+
+            <EditText
+                android:id="@+id/editUretimAd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="100dp"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textUretimAd1" />
+
+            <Button
+                android:id="@+id/buttonRaporuEkle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="60dp"
+                android:ems="10"
+                android:text="Raporu Kaydet"
+                android:textSize="18sp"
+                app:cornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editUretimAd" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

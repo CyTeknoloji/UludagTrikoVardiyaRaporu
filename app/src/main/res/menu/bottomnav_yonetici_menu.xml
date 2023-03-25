@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tamamlanmisRaporlarFragment"
+        android:icon="@drawable/tamamraporicon"
+        android:title="Raporlar" />
+
+    <item
+        android:id="@+id/istatistikMainFragment"
+        android:icon="@drawable/istatistikicon"
+        android:title="İstatistikler"/>
+
+    <item
+        android:id="@+id/varyantFragment"
+        android:icon="@drawable/varyanticon"
+        android:title="Varyantlar"/>
+
+    <item
+        android:id="@+id/kullanicilarFragment"
+        android:icon="@drawable/usersicon"
+        android:title="Kullanıcılar" />
+    <item
+        android:id="@+id/hesabimFragment"
+        android:icon="@drawable/usericon"
+        android:title="Hesabım" />
+</menu>

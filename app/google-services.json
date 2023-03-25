@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "739491440041",
+    "project_id": "uludag-triko-vardiya-raporu",
+    "storage_bucket": "uludag-triko-vardiya-raporu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739491440041:android:f40df0b419267af38dd0b8",
+        "android_client_info": {
+          "package_name": "com.caneryildirim.uludagtrikovardiyaraporu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739491440041-q6dio7g2qd9ogmn7enk8uaha4fmg71jq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUerZYopexS3HgP3a0iu7qsVg-CHd664Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739491440041-q6dio7g2qd9ogmn7enk8uaha4fmg71jq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

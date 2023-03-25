@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_user"
+    app:startDestination="@id/raporlarimFragment">
+
+    <fragment
+        android:id="@+id/raporlarimFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.userView.RaporlarimFragment"
+        android:label="Raporlarım"
+        tools:layout="@layout/fragment_raporlarim" >
+        <action
+            android:id="@+id/action_raporlarimFragment_to_raporEkleFragment"
+            app:destination="@id/raporEkleFragment" />
+        <action
+            android:id="@+id/action_raporlarimFragment_to_raporDetailFragment"
+            app:destination="@id/raporDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hesabimKullaniciFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.userView.HesabimKullaniciFragment"
+        android:label="Hesabım"
+        tools:layout="@layout/fragment_hesabim_kullanici" />
+    <fragment
+        android:id="@+id/raporEkleFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.userView.RaporEkleFragment"
+        android:label="Rapor Ekle"
+        tools:layout="@layout/fragment_rapor_ekle" >
+        <argument
+            android:name="makina"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/raporDetailFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.userView.RaporDetailFragment"
+        android:label="Rapor Detayları"
+        tools:layout="@layout/fragment_rapor_detail">
+        <argument
+            android:name="rapor"
+            app:argType="com.caneryildirim.uludagtrikovardiyaraporu.model.Rapor" />
+        <argument
+            android:name="adminInfo"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_raporDetailFragment_to_raporDuzenleFragment"
+            app:destination="@id/raporDuzenleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/raporDuzenleFragment"
+        android:name="com.caneryildirim.uludagtrikovardiyaraporu.userView.RaporDuzenleFragment"
+        android:label="Raporu Düzenle"
+        tools:layout="@layout/fragment_rapor_duzenle">
+        <argument
+            android:name="rapor"
+            app:argType="com.caneryildirim.uludagtrikovardiyaraporu.model.Rapor" />
+        <action
+            android:id="@+id/action_raporDuzenleFragment_to_raporDetailFragment"
+            app:destination="@id/raporDetailFragment"
+            app:popUpTo="@id/raporDuzenleFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
